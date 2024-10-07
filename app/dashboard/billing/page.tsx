@@ -1,97 +1,85 @@
 "use client";
 import React from 'react';
 import { CircleCheckBig } from 'lucide-react';
-import { checkout } from "@/components/checkout";
 
 function Billing() {
   return (
-    <div className="p-8">
-      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
-        <h2 className="text-center font-bold text-4xl my-3 text-primary">Upgrade To CogniCreate Prime</h2>
+    <div>
+      <div className="mx-auto max-w-3xl px-4 py-4 sm:px-6 sm:py-8">
+        <h2 className="text-center font-extrabold text-4xl text-primary">Upgrade To CogniCreate Prime</h2>
       </div>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:items-center sm:justify-center p-6">
-        <div className="rounded-2xl bg-white border border-gray-200 p-5">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:items-center sm:justify-center px-10">
+        <div className="rounded-2xl bg-white border border-gray-200 p-5 hover:border-primary hover:border-2 hover:scale-105">
           <div className="text-center">
-            <h2 className="text-lg font-medium text-gray-900">
+            <h2 className="text-2xl font-bold text-gray-900">
               Free
             </h2>
             <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-2xl">Re. 0</strong>
+              <strong className="text-3xl font-bold text-primary sm:text-2xl">₹ 0</strong>
               <span className="text-sm font-medium text-gray-700">/month</span>
             </p>
           </div>
           <ul className="mt-6 space-y-2">
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10,000 Words/Month</span>
+              <span className="text-gray-700 px-2"> 10,000 Words/Month</span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10+ Content Templates </span>
+              <span className="text-gray-700 px-2"> 10+ Content Templates </span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> Unlimited Download & Copy </span>
+              <span className="text-gray-700 px-2"> Unlimited Download & Copy </span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10+ Content Templates </span>
-            </li>
-            <li className="flex items-center gap-1">
-              <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 1 Month of History </span>
+              <span className="text-gray-700 px-2"> 1 Month of History </span>
             </li>
           </ul>
           <a
-            href="#"
+            href="/dashboard"
             className="mt-8 block rounded-full border border-indigo-600 px-12 py-3 text-center
-            text-sm font-medium bg-gray-500 text-white hover:ring-1 hover:ring-indigo-600
-            focus:outline-none">
+            text-md font-medium bg-gray-400 text-white hover:ring-1 hover:ring-indigo-600
+            hover:text-black duration-500 focus:outline-none cursor-pointer">
             Currently Active Plan
           </a>
         </div>
-        <div className="rounded-2xl bg-white border border-gray-200 p-5">
+        <div className="rounded-2xl bg-white border border-gray-200 p-5 hover:border-primary hover:border-2 hover:scale-105">
           <div className="text-center">
-            <h2 className="text-lg font-medium text-gray-900">
+            <h2 className="text-2xl font-bold text-gray-900">
               Prime
             </h2>
             <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-2xl">Rs. 100</strong>
+              <strong className="text-3xl font-bold text-primary sm:text-2xl">₹ 100</strong>
               <span className="text-sm font-medium text-gray-700">/month</span>
             </p>
           </div>
-          <ul className="mt-6 space-y-2">
+          <ul className="m-6 space-y-2">
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10,00,000 Words/Month </span>
+              <span className="text-gray-700 px-2"> 10,00,000 Words/Month </span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10+ Content Templates </span>
+              <span className="text-gray-700 px-2"> 10+ Content Templates </span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> Unlimited Download & Copy </span>
+              <span className="text-gray-700 px-2"> Unlimited Download & Copy </span>
             </li>
             <li className="flex items-center gap-1">
               <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 10+ Content Templates </span>
-            </li>
-            <li className="flex items-center gap-1">
-              <CircleCheckBig className="text-green-500" />
-              <span className="text-gray-700"> 1 Year of History </span>
+              <span className="text-gray-700 px-2"> 1 Year of History </span>
             </li>
           </ul>
           <a
-            href="#"
+            href='https://buy.stripe.com/test_4gw28k425gWf62ccMM'
             className="mt-8 block rounded-full border border-indigo-600 px-12 py-3 text-center
-            text-sm font-medium text-white bg-violet-500 hover:ring-1 hover:ring-indigo-600 focus:outline-none"
-            onClick={(() => {
-              checkout({
-                lineItems: [{ price: "price_1Q5DEGRxnAYNH5k92LzTCuFw", quantity: 1 }]
-              })
-            })}>
-            Get Started
+            text-md font-medium text-white bg-gradient-to-r from-indigo-700 to-blue-400
+            hover:ring-2 hover:ring-indigo-600 hover:text-black duration-500 focus:outline-none
+            cursor-pointer">
+            Be Our Prime Member
           </a>
         </div>
       </div>
